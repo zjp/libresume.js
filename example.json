@@ -1,0 +1,102 @@
+{
+	"name": "First Last",
+	"summary": "",
+	"github": "username",
+	"linkedIn": "username",
+	"email": "a@b.com",
+	"phone": "1234567890",
+	"country_code": "United States",
+	"research_interests": [],
+	"students": [
+		{
+			"name": "First Last",
+			"level": "PhD",
+			"university": "ABC University",
+			"start_date": null,
+			"end_date": null
+		}
+	],
+	"education": [
+		{
+			"uni_name": "The University of Kansas",
+			"schools": [
+				{
+					"name": "School of Engineering",
+					"degrees": [
+						{
+							"level": "Bachelor",
+							"type": "Sciences",
+							"concentration": "Computer Science",
+							"formatting": "level type",
+							"start_date": null,
+							"end_date": null,
+							"awarded": true
+						}
+					]
+				},
+				{
+					"name": "College of Liberal Arts and Sciences",
+					"degrees": [
+						{
+							"level": "Bachelor",
+							"type": "Sciences",
+							"concentration": "Chemistry",
+							"formatting": "level type",
+							"start_date": null,
+							"end_date": null,
+							"awarded": true
+						}
+					]
+				}
+			]
+		}
+	],
+	"jobs": [
+		{
+			"company": "Organization 1",
+			"positions": [
+				{
+					"title": "Software Engineer",
+					"notes": [
+						"Achievement 1",
+						"Achievement 2"
+					],
+					"start_date": null,
+					"end_date": null,
+					"full_time": null,
+					"research": null,
+					"industry": null,
+					"teaching": null
+				}
+			]
+		}
+	],
+	"projects": [
+		{
+			"title": "libresume.js",
+			"languages": [
+				"JavaScript"
+			],
+			"technologies": [],
+			"professional": false,
+			"personal": true,
+			"university": false,
+			"maintainer": true,
+			"NDA": false
+		}
+	],
+	"publications": [
+		{
+			"title": "Paper 1",
+			"authors": [
+				"Author 1",
+				"Author 2",
+				"Author 3"
+			],
+			"journal": "Bar",
+			"pub_date": null
+		}
+	],
+	"awards": [],
+	"grants": []
+}
