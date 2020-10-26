@@ -16,7 +16,8 @@ Let's make that happen.
 
 # TODO 
 - [x] Plaintext formatting
-- [ ] Dynamically set line length of plaintext formatting from env
+- [x] Dynamically set line length of plaintext formatting
+- [ ] Support all categories
 - [ ] Dynamically set specializations from env
 - [ ] Rearrange sections in plaintext
 - [ ] Export to .tex
