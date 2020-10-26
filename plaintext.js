@@ -110,6 +110,19 @@ function formatPlaintextResume(resume, specialization = "", colWidth = 80) {
   return plaintext_resume;
 }
 
+function formatSplitHeader(leftInput, rightInput, colWidth) {
+  var innerGap = colWidth - leftInput.length - rightInput.length;
+  if(innerGap < 0) {
+    throw (
+      "TitleImpactError: Increase width. Requested: "
+        + colWidth
+        + " Advised: "
+        + (parseInt(colWidth) + Math.abs(innerGap) + 5)
+    );
+  }
+  return leftInput + " ".repeat(innerGap) + rightInput + '\n';
+}
+
 function breakIntoLinesOnCol(inputStr, lineOffset, colWidth) {
   var finalString = "";
   // We will insert spaces on the left to fill out to colWidth
