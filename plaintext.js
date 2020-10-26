@@ -109,6 +109,17 @@ function formatPlaintextResume(resume, specialization = "", colWidth = 80) {
   return plaintext_resume;
 }
 
+function formatTenure(start, end) {
+  var startDate = new Date(start).toLocaleString('default', {month: 'short', year: 'numeric'});
+  var endDate;
+  if(end) {
+    endDate = new Date(end).toLocaleString('default', {month: 'short', year: 'numeric'});
+  } else {
+    endDate = "Present";
+  }
+  return `${startDate} - ${endDate}`;
+}
+
 function formatSplitHeader(leftInput, rightInput, colWidth) {
   var innerGap = colWidth - leftInput.length - rightInput.length;
   if(innerGap < 0) {
