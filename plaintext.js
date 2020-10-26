@@ -29,16 +29,8 @@ function formatJob(job, colWidth) {
   let formattedJob = formatSplitHeader(job.company, job.location, colWidth);
   for(let position of job.positions) {
     var titleStr = `${position.title}`;
-    var startDate = new Date(position.start_date).toLocaleString('default', {month: 'short', year: 'numeric'});
-    var endDate;
-    if(position.end_date) {
-      endDate = new Date(position.end_date).toLocaleString('default', {month: 'short', year: 'numeric'});
-    } else {
-      endDate = "Present";
-    }
-    var tenure_str = `${startDate} - ${endDate}`;
-    var innerGap = colWidth - tenure_str.length - titleStr.length;
-    formattedJob += formatSplitHeader(titleStr, tenure_str, colWidth);
+    var tenureStr = formatTenure(position.start_date, position.end_date);
+    formattedJob += formatSplitHeader(titleStr, tenureStr, colWidth);
     for(let note of position.notes) {
       var noteBullet = " - ";
       note = noteBullet + note;
