@@ -26,8 +26,7 @@ function formatGeneralPlaintextHeader(resume, colWidth) {
 }
 
 function formatJob(job, colWidth) {
-  var companyTitleInnerGap = colWidth - job.company.length - job.location.length;
-  let formattedJob = job.company + " ".repeat(companyTitleInnerGap) + job.location + '\n';
+  let formattedJob = formatSplitHeader(job.company, job.location, colWidth);
   for(let position of job.positions) {
     var titleStr = `${position.title}`;
     var startDate = new Date(position.start_date).toLocaleString('default', {month: 'short', year: 'numeric'});
@@ -39,7 +38,7 @@ function formatJob(job, colWidth) {
     }
     var tenure_str = `${startDate} - ${endDate}`;
     var innerGap = colWidth - tenure_str.length - titleStr.length;
-    formattedJob += titleStr + " ".repeat(innerGap) + tenure_str + '\n';
+    formattedJob += formatSplitHeader(titleStr, tenure_str, colWidth);
     for(let note of position.notes) {
       var noteBullet = " - ";
       note = noteBullet + note;
