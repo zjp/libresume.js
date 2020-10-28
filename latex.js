@@ -75,7 +75,7 @@ function writePreamble(paperSize, textSize, exporter, font) {
 function writeContactInfo(resume) {
   let contactInfo =
       "\\begin{tabular*}{\\textwidth}{l@{\\extracolsep{\\fill}}r}\n"
-      + `  \\textbf{\\href{${resume.website}}{\\Large ${resume.name}}} \& \\\\\n`
+      + `  \\textbf{\\href{https://www.${resume.website}}{\\Large ${resume.name}}} \& \\\\\n`
       + `  \\href{http://www.github.com/${resume.github}}{http://www.github.com/${resume.github}} \&\n`
       + `  Email : \\href{mailto:${resume.email}}{${resume.email}} \\\\\n`
       + `  \\href{https://www.linkedin.com/in/${resume.linkedIn}}{https://www.linkedin.com/in/${resume.linkedIn}} \&\n`
