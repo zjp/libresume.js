@@ -10,16 +10,45 @@ function writePreamble(paperSize, textSize, exporter, font) {
     // TODO: Write an imperative to compile with xelatex, etc
   }
   //formattedHeader += formatLicense(2013, "Sourabh Bajaj", "MIT");
-  formattedHeader += "\\documentclass[" + paperSize + ',' + textSize + 'pt]{article}\n';
-  formattedHeader += "\\usepackage{enumitem}\n";
-  formattedHeader += "\\usepackage[hidelinks]{hyperref}\n";
+  formattedHeader +=
+    "\\documentclass[" + paperSize + ',' + textSize + 'pt]{article}\n'
+    + "\\usepackage{latexsym}\n"
+    + "\\usepackage[empty]{fullpage}\n"
+    + "\\usepackage{titlesec}\n"
+    + "\\usepackage{marvosym}\n"
+    + "\\usepackage[usenames,dvipsnames]{color}\n"
+    + "\\usepackage{verbatim}\n"
+    + "\\usepackage{enumitem}\n"
+    + "\\usepackage[hidelinks]{hyperref}\n"
+    + "\\usepackage{fancyhdr}\n"
+    + "\\usepackage[english]{babel}\n"
+    + "\\usepackage{multicol}\n"
+    + "\\usepackage{graphicx}\n";
+
   if(font) {
     formattedHeader +=
       "\\usepackage{fontspec}\n"
       + `\\setmainfont${font}\n`;
   }
   formattedHeader +=
-    "\\newcommand{\\resumeItem}[2]{\\item\\small{\\textbf{#1}{: #2 \\vspace{-2pt}}}}\n"
+    "\\pagestyle{fancy}\n"
+    + "\\fancyhf{}\n"
+    + "\\fancyfoot{}\n"
+    + "\\renewcommand{\\headrulewidth}{0pt}\n"
+    + "\\renewcommand{\\footrulewidth}{0pt}\n"
+    + "\\addtolength{\\oddsidemargin}{-0.5in}\n"
+    + "\\addtolength{\\evensidemargin}{-0.5in}\n"
+    + "\\addtolength{\\textwidth}{1in}\n"
+    + "\\addtolength{\\topmargin}{-0.5in}\n"
+    + "\\addtolength{\\textheight}{1.0in}\n"
+    + "\\urlstyle{same}\n"
+    + "\\raggedbottom\n"
+    + "\\raggedright\n"
+    + "\\setlength{\\tabcolsep}{0in}\n"
+    + "\\titleformat{\\section}{\n"
+    + "  \\vspace{-4pt}\\scshape\\raggedright\\large"
+    + "}{}{0em}{}[\\color{black}\\titlerule \\vspace{-5pt}]\n"
+    + "\\newcommand{\\resumeItem}[2]{\\item\\small{\\textbf{#1}{: #2 \\vspace{-2pt}}}}\n"
     + "\\newcommand{\\resumeBullet}[1]{\n\\item\\small{{#1 \\vspace{-2pt}}}}\n"
     + "\\newcommand{\\resumeSubheading}[4]{\n"
     + "  \\vspace{-1pt}\\item\n"
