@@ -14,6 +14,9 @@ Failing that, I at least want to be able to check off things I want to include o
 
 Let's make that happen.
 
+## Didn't JSONResume already do this?
+Yeah, so what?
+
 # TODO 
 - [x] Plaintext formatting
 - [x] Dynamically set line length of plaintext formatting
